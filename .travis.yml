@@ -18,6 +18,6 @@ before_deploy:
 deploy:
 - provider: script
   skip_cleanup: true
-  script: rsync -e "ssh -p2222" -av ./ --delete-excluded --exclude='.git/' --exclude='.travis/' --exclude='.travis.yml' $user@$host:$deployroot
+  script: rsync -e "ssh -p2222" -av --exclude='.git/' --exclude='.travis/' --exclude='.travis.yml' $user@$host:$deployroot
   on:
     branch: master

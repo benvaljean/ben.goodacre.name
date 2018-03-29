@@ -1,12 +1,23 @@
 language: python
 python:
- - "2.7"
+- '2.7'
 addons:
+  ssh_known_hosts: $host
   apt:
     packages:
-      - openjdk-8-jre  # install Java8 as required by vnu.jar
-
+    - openjdk-8-jre
 install:
- - pip install html5validator
-
+- pip install html5validator
 script: html5validator --root .
+before_deploy:
+- openssl aes-256-cbc -K $encrypted_18c5b1c7359c_key -iv $encrypted_18c5b1c7359c_iv
+  -in .travis/deploy.key.enc -out /tmp/deploy.key -d
+- eval "$(ssh-agent -s)"
+- chmod 600 /tmp/deploy.key
+- ssh-add /tmp/deploy.key
+deploy:
+- provider: script
+  skip_cleanup: true
+  script: rsync -av ./ --delete-excluded --exclude='.git/' --exclude='.travis/' --exclude='.travis.yml' $user@$host:$deployroot
+  on:
+    branch: master

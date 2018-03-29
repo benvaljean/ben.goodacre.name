@@ -14,7 +14,7 @@ before_deploy:
 - eval "$(ssh-agent -s)"
 - chmod 600 /tmp/deploy.key
 - ssh-add /tmp/deploy.key
-- ssh-keyscan -p2222 -t $TRAVIS_SSH_KEY_TYPES -H $host 2>&1 | tee -a $HOME/.ssh/known_hosts
+- ssh-keyscan -p2222 -H $host 2>&1 | tee -a $HOME/.ssh/known_hosts
 deploy:
 - provider: script
   skip_cleanup: true

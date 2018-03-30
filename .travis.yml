@@ -7,7 +7,7 @@ addons:
     - openjdk-8-jre
 install:
 - pip install html5validator
-script: html5validator --root .
+script: html5validator --root public_html/
 before_deploy:
 - openssl aes-256-cbc -K $encrypted_18c5b1c7359c_key -iv $encrypted_18c5b1c7359c_iv
   -in .travis/deploy.key.enc -out /tmp/deploy.key -d

@@ -1,0 +1,43 @@
+version: 2
+jobs:
+  test-site:
+    docker:
+      - image: python:3.6-stretch
+    steps:
+      - run:
+          name: install Java
+          command: apt-get update && apt-get install -y openjdk-8-jre
+      - checkout
+      - run:
+          name: install html5validator
+          command: pip install html5validator
+      - run:
+          name: validate html
+          command: html5validator --root public_html/
+  deploy-site:
+    docker:
+      - image: python:3.6-stretch
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "f5:62:41:6a:c5:ad:c2:3b:d8:f8:24:bb:2f:ad:99:b8"
+      - run:
+          name: install rsync
+          command: apt-get update && apt-get install -y rsync
+      - run:
+          name: rsync-site
+          command: |
+            cat .circleci/deploy-host.pub >> $HOME/.ssh/known_hosts
+            rsync -ve "ssh -p2222" -r "$PWD/public_html/" $user@$host:$deployroot
+workflows:
+  version: 2
+  test-and-deploy-site:
+    jobs:
+      - test-site
+      - deploy-site:
+          requires:
+            - test-site
+          filters:
+            branches:
+              only: master

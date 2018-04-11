@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/benvaljean
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://ben.goodacre.name
+  * I am benvaljean (https://keybase.io/benvaljean) on keybase.
+  * I have a public key ASDlxwgnW2kAr4T0J-IzMX_CYE8VxPSdTBt7SwjoT9uxBQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120e5c708275b6900af84f427e233317fc2604f15c4f49d4c1b7b4b08e84fdbb1050a",
+      "host": "keybase.io",
+      "kid": "0120e5c708275b6900af84f427e233317fc2604f15c4f49d4c1b7b4b08e84fdbb1050a",
+      "uid": "928f434f593df790741ed03385a49219",
+      "username": "benvaljean"
+    },
+    "merkle_root": {
+      "ctime": 1523450888,
+      "hash": "49c6396cbbc80cba19a88b8534f670cfda85c98ebd83f469d5235410cc978b65fac44b4c5f5cc01e8b59abeab088ee334f2079b49eb19cae09a8e4b8de99cccb",
+      "hash_meta": "0a70efd5e80c938acc646b449fdf64c47801857a58eddf33e5bb1a9d3d0d6f9d",
+      "seqno": 2370384
+    },
+    "service": {
+      "entropy": "jLNdDIei2XYlOlHVx/HHVT2T",
+      "hostname": "ben.goodacre.name",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.47"
+  },
+  "ctime": 1523450895,
+  "expire_in": 504576000,
+  "prev": "545647de4f63e632dfecdc01aef2bf2b299dc3d3dc5336bfccadabf0806a25c4",
+  "seqno": 5,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg5ccIJ1tpAK+E9CfiMzF/wmBPFcT0nUwbe0sI6E/bsQUKp3BheWxvYWTESpcCBcQgVFZH3k9j5jLf7NwBrvK/Kymdw9PcUza/zK2r8IBqJcTEIKhbTxzjUEMqSRSiKwXyXd0nwBFdp2Rd9AdG2wM405MhAgHCo3NpZ8RAWqnu4RB4BsV/gdzl1kkkkuBekVgo/WOsRHNacEP72c6Cfv5JpebriKGTYuIJG/02oIiaxn+dgy8hkNXJ+UDpCqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIBmvjE0dnOxoWxwJLZn0DHYkYvzfuBF4Qhg5ItOQSa1ro3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/benvaljean
+
+==================================================================
